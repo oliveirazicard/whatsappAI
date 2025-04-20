@@ -1,0 +1,9 @@
+flask
+twilio
+langchain
+langchain-community
+langchain-openai
+openai
+faiss-cpu
+tiktoken
+unstructured[all-docs]
