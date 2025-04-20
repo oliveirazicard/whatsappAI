@@ -4,9 +4,8 @@ from langchain.chains import RetrievalQA
 from langchain_openai import OpenAIEmbeddings, OpenAI
 from langchain_community.vectorstores import FAISS
 from dotenv import load_dotenv 
-load_dotenv()
-
 import os
+load_dotenv()
 
 app = Flask(__name__)
 
