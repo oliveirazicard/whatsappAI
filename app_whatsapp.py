@@ -8,7 +8,7 @@ import os
 load_dotenv()
 
 app = Flask(__name__)
-@app.route("/whatsapp", methods=["POST"])
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))  # Render define essa variável
     app.run(host="0.0.0.0", port=port)
@@ -17,6 +17,7 @@ if not os.getenv("OPENAI_API_KEY"):
     raise ValueError("❌ OPENAI_API_KEY não encontrada. Verifique o .env ou variáveis de ambiente.")
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+@app.route("/whatsapp", methods=["POST"])
 
 def whatsapp_reply():
     incoming_msg = request.values.get("Body", "").strip()
